@@ -1,0 +1,22 @@
+<p>bill works!</p>
+
+<button type="button" (click)="isVisible = true">Show</button>
+<button type="button" (click)="isVisible = false">Hide</button>
+<div *ngIf="isVisible">
+<table>
+    <tr>
+        <th>Prod Id</th>
+        <th>Prod Name</th>
+        <th>Price</th>
+        <th>Count</th>
+        <th>Total</th>
+    </tr>
+    <tr *ngFor="let product of products">
+    <td>{{product.id}}</td>
+    <td>{{product.name}}</td>
+    <td>{{product.price}}</td>
+    <td>{{product.count}}</td>
+    <td>{{product.total}}</td>
+</tr>
+</table>
+</div>
